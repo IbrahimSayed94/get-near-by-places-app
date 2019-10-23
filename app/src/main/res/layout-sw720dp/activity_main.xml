@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_5sdp"
+        android:id="@+id/recyclerView"
+        android:visibility="gone"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/failure_message"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        android:id="@+id/txt_failure_message"
+        android:visibility="gone"
+        android:drawableEnd="@drawable/ic_error"
+        android:drawableRight="@drawable/ic_error"
+        android:drawablePadding="@dimen/_5sdp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_data_found"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        android:id="@+id/txt_no_data_found"
+        android:drawableEnd="@drawable/ic_empty"
+        android:drawableRight="@drawable/ic_empty"
+        android:drawablePadding="@dimen/_5sdp"
+        android:visibility="gone"
+        />
+
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_25sdp"
+        android:src="@drawable/ic_settings"
+        android:tint="@android:color/white"
+        android:onClick="changeModel"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FourSquare-Task</string>
+
+    <string name="enableLocation">Enable Location</string>
+    <string name="settingLocationMenu">Your locations setting is not enabled. Please enabled it in settings menu.</string>
+    <string name="locationSetting">Location Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="failure_message">Connection failed !!</string>
+    <string name="no_data_found">No data found !!</string>
+    <string name="select_mode">Select favorite mode</string>
+    <string name="real_time">Realtime</string>
+    <string name="single_update">Single Update</string>
+    <string name="single_update_mode_activated">Single update mode Activated</string>
+    <string name="real_time_mode_activated">Realtime mode Activated</string>
+</resources>
