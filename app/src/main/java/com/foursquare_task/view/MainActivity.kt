@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var network : Network
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -220,8 +221,6 @@ class MainActivity : AppCompatActivity() {
         override fun onLocationChanged(location: Location) {
             // Called when a new location is found by the network location provider.
 
-            showProgress()
-
             Log.e(TAG,"Location Lisener : "+location.latitude)
 
             val currentLocation = location.latitude.toString()+","+location.longitude.toString()
@@ -279,6 +278,7 @@ class MainActivity : AppCompatActivity() {
     
     fun realTimeMode()
     {
+        showProgress()
         if(Permission.checkLocationPermission(this)) {
             locationManager.requestLocationUpdates(
 

@@ -25,11 +25,16 @@ class RetrofitClient
                 .create()
 
             if (retrofitInstance == null) {
-                retrofitInstance = Retrofit.Builder()
-                    .baseUrl("https://api.foursquare.com/v2/")
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .build()
+                try {
+                    retrofitInstance = Retrofit.Builder()
+                        .baseUrl("https://api.foursquare.com/v2/")
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                        .build()
+                }catch (e : Exception)
+                {
+                    e.printStackTrace()
+                }
             }
 
             return retrofitInstance
